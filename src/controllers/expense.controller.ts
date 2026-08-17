@@ -17,15 +17,6 @@ export const getExpenses = (
 };
 
 export const createExpense = (req: Request<{}, {}, CreateExpense>, res: Response) => {
-  const { title, amount, category, description } = req.body;
-
-  if (!title?.trim() || amount === undefined || !category) {
-    return res.status(400).json({
-      success: false,
-      data: null,
-    });
-  }
-
   const newExpense = createExpenseService(req.body);
 
   return res.status(201).json({

@@ -1,6 +1,6 @@
 export type CreateExpense = Omit<Expense, "id">;
 
-type ExpenseCategory =
+export type ExpenseCategory =
   | "Food"
   | "Travel"
   | "Shopping"
