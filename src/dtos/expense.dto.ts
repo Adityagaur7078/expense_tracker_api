@@ -6,3 +6,5 @@ export type CreateExpenseDto = {
   category: ExpenseCategory;
   description?: string;
 };
+
+export type UpdateExpenseDto = Partial<CreateExpenseDto>;

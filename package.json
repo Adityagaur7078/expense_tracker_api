@@ -1,38 +1,34 @@
 {
-  "name": "expense_tracker_api",
+  "name": "expense-tracker-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Adityagaur7078/expense_tracker_api.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Adityagaur7078/expense_tracker_api/issues"
-  },
-  "homepage": "https://github.com/Adityagaur7078/expense_tracker_api#readme",
   "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "ioredis": "^6.0.0",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.9.1",
-    "zod": "^4.4.3"
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "ioredis": "^5.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.0",
+    "zod": "^4.0.17"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
-    "@types/express": "^5.0.6",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
     "@types/jsonwebtoken": "^9.0.10",
-    "@types/node": "^26.2.0",
-    "tsx": "^4.23.12",
-    "typescript": "^7.0.2"
+    "@types/node": "^24.3.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   }
 }

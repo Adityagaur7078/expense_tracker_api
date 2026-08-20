@@ -1,5 +1,3 @@
-export type CreateExpense = Omit<Expense, "id">;
-
 export type ExpenseCategory =
   | "Food"
   | "Travel"
@@ -10,9 +8,18 @@ export type ExpenseCategory =
   | "Other";
 
 export type Expense = {
-    title: string;
-    amount: number;
-    category: ExpenseCategory;
-    description?: string;
-    readonly id: string;
+  readonly id: string;
+  title: string;
+  amount: number;
+  category: ExpenseCategory;
+  description?: string;
+  userId: string;
+  createdAt: string;
+  updatedAt: string;
 };
+
+export type CreateExpense = Omit<
+  Expense,
+  "id" | "userId" | "createdAt" | "updatedAt"
+>;
+export type UpdateExpense = Partial<Omit<Expense, "id" | "userId" | "createdAt" | "updatedAt">>;

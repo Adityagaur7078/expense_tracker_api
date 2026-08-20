@@ -1,4 +1,12 @@
-export type ApiResponse<T> = {
-    success: boolean;
-    data: T | null;
+export type ApiSuccess<T> = {
+  success: true;
+  data: T;
 };
+
+export type ApiFailure = {
+  success: false;
+  data: null;
+  error: string;
+};
+
+export type ApiResponse<T> = ApiSuccess<T> | ApiFailure;
